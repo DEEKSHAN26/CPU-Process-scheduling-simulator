@@ -57,5 +57,22 @@ int main() {
     printf("\nAverage Waiting Time: %.2f\n", totalWT / n);
     printf("Average Turnaround Time: %.2f\n", totalTAT / n);
 
+
+    printf("\nGantt Chart:\n");
+
+for (i = 0; i < n; i++) {
+    printf("| P%d ", i + 1);
+}
+printf("|\n");
+
+time = 0;
+printf("0");
+
+for (i = 0; i < n; i++) {
+    time += bt[i];
+    printf("     %d", time);
+}
+printf("\n");
+
     return 0;
 }
